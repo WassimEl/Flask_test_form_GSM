@@ -1,0 +1,54 @@
+{% extends 'base_block.html' %}
+
+{% block content %}
+
+<h1>{% block title %} Encodez les informations de votre téléphone {% endblock %}</h1>
+<form method="POST" action="{{ url_for('submit') }}">
+    <label for="numero">Numéro de téléphone :</label>
+    <input type="tel" id="numero" name="numero" required><br>
+    
+    <label for="modele">Modèle du téléphone :</label>
+    <input type="text" id="modele" name="modele" required><br>
+
+    <label for="marque">Marque du téléphone :</label>
+    <input type="text" id="marque" name="marque" required><br>
+
+    <label for="annee">Année de fabrication du téléphone :</label>
+    <select name="annee" id="annee">
+        <option value="">Choisir une année</option>
+        <option value="2012">2024</option>
+        <option value="2012">2023</option>
+        <option value="2012">2022</option>
+        <option value="2012">2021</option>
+        <option value="2012">2020</option>
+        <option value="2012">2019</option>
+        <option value="2012">2018</option>
+        <option value="2012">2017</option>
+        <option value="2012">2016</option>
+        <option value="2012">2015</option>
+        <option value="2012">2014</option>
+        <option value="2012">2013</option>
+        <option value="2012">2012</option>
+        <option value="2011">2011</option>
+        <option value="2010">2010</option>
+        <option value="2009">2009</option>
+        <option value="2008">2008</option>
+        <option value="2007">2007</option>
+        <option value="2006">2006</option>
+        <option value="2005">2005</option>
+        <option value="2004">2004</option>
+        <option value="2003">2003</option>
+        <option value="2002">2002</option>
+        <option value="2001">2001</option>
+        <option value="2000">2000</option>
+        <option value="1999">1999</option>
+        <option value="1998">1998</option>
+        <option value="1997">1997</option>
+        <option value="1996">1996</option>
+        <option value="1995">1995</option>
+        <option value="1994">1994</option>
+    </select>
+    <button type="submit">Envoyer</button>
+</form>
+    
+{% endblock %}

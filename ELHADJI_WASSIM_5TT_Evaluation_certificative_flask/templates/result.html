@@ -1,0 +1,22 @@
+{% extends 'base_block.html' %}
+
+{% block content %}
+<h1>{% block title %}Liste des téléphone{% endblock %}</h1>
+<table>
+    <tr>
+        <th>Numéro de téléphone</th>
+        <th>Modèle du téléphone</th>
+        <th>Marque du téléphone</th>
+        <th>Année de fabrication du téléphone</th>
+    </tr>
+    {% for user in data %}
+    <tr>
+        <td>{{ user.numero }}</td>
+        <td>{{ user.modele }}</td>
+        <td>{{ user.marque }}</td>
+        <td>{{ user.annee }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
